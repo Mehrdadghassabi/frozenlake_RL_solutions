@@ -4,8 +4,8 @@ import random
 import pickle
 
 
-def train(episode_number, max_steps, alpha, gamma, epsilon, decay_rate, render_mode):
-    env = gym.make("FrozenLake-v1", render_mode=render_mode, is_slippery=False)
+def train(episode_number, max_steps, alpha, gamma, epsilon, decay_rate, render_mode, desc):
+    env = gym.make("FrozenLake-v1", render_mode=render_mode, is_slippery=False, desc=desc)
     env.reset()
     qtable = np.zeros((env.observation_space.n, env.action_space.n))
 
@@ -45,7 +45,7 @@ def train(episode_number, max_steps, alpha, gamma, epsilon, decay_rate, render_m
     env.close()
 
 
-def exploit_trained_qtable(max_steps, alpha, gamma, render_mode):
+def exploit_trained_qtable(max_steps, render_mode):
     env = gym.make("FrozenLake-v1", render_mode=render_mode, is_slippery=False)
     state = env.reset()[0]
     qtable = get_train_result()
