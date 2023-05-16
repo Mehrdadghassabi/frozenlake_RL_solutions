@@ -21,4 +21,4 @@ desc = generate_random_map(
 # Sarsa.train(episode_number, max_steps, alpha, gamma, epsilon, decay_rate, render_mode)
 # Sarsa.exploit_trained_qtable(max_steps, render_mode)
 # Monte_Carlo.train(episode_number, max_steps, epsilon, decay_rate, render_mode)
-Monte_Carlo.exploit_trained_qtable(max_steps, render_mode)
+# Monte_Carlo.exploit_trained_qtable(max_steps, render_mode)
